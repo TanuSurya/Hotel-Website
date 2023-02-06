@@ -32,6 +32,29 @@ li {
 
 .navbar-large li {
     cursor: pointer;
+    padding-bottom: 2px;
+    position: relative;
+}
+
+.navbar-large li::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    height: 2px;
+    background-color: #fff;
+    display: block;
+}
+
+.navbar-large li#search-box::after {
+    background-color: #ffffff00;
+}
+
+.navbar-large li:nth-child(1):after {
+    bottom: 8px;
+}
+
+.navbar-large li:hover::after {
+    animation: underlineEffect 200ms ease 0s forwards;
 }
 
 .navbar-large li input {
@@ -92,6 +115,17 @@ li:nth-child(1) img {
         display: flex;
         align-items: center;
         justify-content: space-between;
+    }
+
+}
+
+@keyframes underlineEffect {
+    from {
+        width: 0%;
+    }
+
+    to {
+        width: 100%;
     }
 
 }
