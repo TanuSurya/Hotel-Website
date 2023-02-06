@@ -1,17 +1,26 @@
 <!DOCTYPE html>
 <html>
+
 <head>
     <meta charset='utf-8'>
     <meta http-equiv='X-UA-Compatible' content='IE=edge'>
     <title>La'otel
     </title>
     <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel="stylesheet" href="./assets/css/styles.css">
+    <link rel="icon" href="./assets/images/favicon.svg" type="image/svg+xml">
+    <script defer src="./assets/javascript/script.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&family=Source+Sans+Pro&display=swap"
+        rel="stylesheet">
     <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
     <script src='main.js'></script>
 </head>
 <style>
     @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&family=Roboto+Condensed&display=swap');
-    body{
+
+    body {
         background: url('https://images.unsplash.com/photo-1599578705716-8d3d9246f53b?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80') no-repeat center;
         background-size: cover;
         z-index: -10;
@@ -19,7 +28,8 @@
         height: 500px;
         position: relative;
     }
-    .border-box{
+
+    .border-box {
         padding: 50px;
         top: 20vh;
         left: 10%;
@@ -29,44 +39,73 @@
         width: 55vw;
         border: 10px solid #fff;
     }
-    .head1{
+
+    .head1 {
         font-family: 'Poppins', sans-serif;
         font-weight: 700;
         font-size: 5rem;
     }
-    .head3{
+
+    .head3 {
         font-family: 'Roboto Condensed', sans-serif;
         font-weight: 600;
         font-size: 2.2rem;
-        
+
     }
-    .boxhead{
+
+    .boxhead {
         color: #fff;
         margin: 50px auto;
     }
+
     @media screen and (max-width: 700px) {
-        .border-box{
+        .border-box {
             border: none;
             justify-content: left;
         }
-        .head1{
+
+        .head1 {
             font-size: 15vw;
         }
-        .head3{
+
+        .head3 {
             font-size: 8vw;
         }
     }
-        
 </style>
+
 <body>
+    <!-- navbar goes here -->
+    <header class="container">
+        <ul class="navbar-large">
+            <li><img src="./assets/images/logo.svg" alt="logo"></li>
+            <li>Categories</li>
+            <li>Special</li>
+            <li>Booking</li>
+            <li><input type="text" placeholder="search"></li>
+        </ul>
+        <div class="navbar-small">
+            <div class="logo"><img src="./assets/images/logo.svg" alt="logo"></div>
+            <div class="hambergerIcon"><img id="ham-icon" src="./assets/images/hamburger.png" alt="menu">
+                <ul class="navbar-dropdown">
+                    <li>Categories</li>
+                    <li>Special</li>
+                    <li>Booking</li>
+                    <li><input type="text" placeholder="search"></li>
+                </ul>
+            </div>
+        </div>
+    </header>
+
     <div class="img">
-<h4></h4>
+        <h4></h4>
         <div class="border-box">
             <div class="boxhead">
-<h1 class="head1">La'otel</h1>
-<h3 class="head3">Let the luxes in.</h3>
-</div>
+                <h1 class="head1">La'otel</h1>
+                <h3 class="head3">Let the luxes in.</h3>
+            </div>
         </div>
     </div>
 </body>
+
 </html>
