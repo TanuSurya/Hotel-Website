@@ -21,7 +21,7 @@ li {
     margin-left: auto;
     margin-right: auto;
 }
-
+/* navbar start */
 .navbar-large {
     display: flex;
     align-items: center;
@@ -32,6 +32,29 @@ li {
 
 .navbar-large li {
     cursor: pointer;
+    padding-bottom: 2px;
+    position: relative;
+}
+
+.navbar-large li::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    height: 2px;
+    background-color: #fff;
+    display: block;
+}
+
+.navbar-large li#search-box::after {
+    background-color: #ffffff00;
+}
+
+.navbar-large li:nth-child(1):after {
+    bottom: 8px;
+}
+
+.navbar-large li:hover::after {
+    animation: underlineEffect 200ms ease 0s forwards;
 }
 
 .navbar-large li input {
@@ -94,4 +117,81 @@ li:nth-child(1) img {
         justify-content: space-between;
     }
 
+}
+
+@keyframes underlineEffect {
+    from {
+        width: 0%;
+    }
+
+    to {
+        width: 100%;
+    }
+
+}
+/* navbar end */
+/* cards */
+.cards-container {
+    margin-top: 250px;
+}
+.container h2 {
+    text-align: center;
+    font-size: xx-large;
+    letter-spacing: 1px;
+
+}
+.container .cards {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: 300px 300px;
+    gap: 5px;
+}
+.container .card .sales-pitch {
+    position: absolute;
+    left: 10%;
+    bottom: 10%;
+    opacity: 0;
+    z-index: 1;
+    transition: opacity 200ms ease-in-out;
+}
+.container .card .sales-pitch h3 {
+    margin-bottom: -10px;
+}
+.container .card:hover .sales-pitch {
+    opacity: 1;
+}
+.cards .card {
+    position: relative;
+    border: 10px solid #eee;
+}
+.cards .card:hover img{
+    opacity: 0.5;
+    cursor: pointer;
+}
+.cards .card:nth-of-type(1) {
+    grid-column: 1/ span 2;
+    grid-row: 1/ span 2;
+}
+.cards .card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: opacity 200ms ease-in-out;
+}
+@media (max-width: 1024px) {
+    .container .cards {
+        grid-template-columns: repeat(auto-fill, minmax(200px, auto));
+    }
+}
+@media (max-width: 768px) {
+    .cards-container {
+        margin-top: 20%;
+    }
+    .cards .card:nth-of-type(1) {
+        grid-column: 1/ 2;
+        grid-row: 1/ 2;
+    }
+    .container .cards {
+        grid-template-columns: 1fr;
+    }
 }
