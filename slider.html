@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Slider</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <script src='main.js'></script>
+</head>
+<style>
+    body {
+  font-family:Inter, cursive;
+}
+
+.card {
+  width: 35%;
+  min-width: 33%;
+  height: 47vh;
+  background:#fff;
+  border-radius:3px;
+  position:relative;
+  z-index:10;
+  margin:15px;
+  min-height:25vh;
+  cursor:pointer;
+  overflow: hidden;
+}
+
+.card i {
+  position:absolute;
+  right: 0;
+  top: 0;
+  padding: 10px;
+  font-size:1.4rem;
+  line-height:1.2rem;
+}
+
+.card .card-text {
+  padding: .5vw;
+}
+
+p {
+  font-size: .8rem;
+  opacity: .8;
+  margin-top: 8px;
+}
+
+.card .card-img {
+  margin: 0 12px;
+  display:flex;
+  align-items: center;
+  justify-content:center;
+}
+
+.card img {
+  margin-top: 8px;
+  width: 55vw;
+  height: 28vh;
+  object-fit: cover;
+}
+
+.card:hover .card-img {
+  box-shadow: 0px 3px 5px black;
+}
+
+.card-content {
+  display:flex;
+  align-items:center;
+  justify-content:flex-start;
+  width:100%;
+  overflow:auto;
+  padding: 50px 50px;
+  scroll-behavior:smooth;
+}
+
+.card-content::-webkit-scrollbar {
+   height:0px;
+}
+
+.card-content:after {
+  content:'';
+  display:block;
+  min-width:20px;
+  height:100px;
+  position:relative;
+}
+
+.btn{
+  min-width: 3vw;
+  margin:auto 8px;
+  height: 3vw;
+  border-radius: 50%;
+  background:#e9e9e9;
+  border: none;
+  outline:none;
+  cursor:pointer;
+  z-index:9999;
+}
+
+.btn:hover{
+  background-color: #c0c0c0;
+  color: black;
+  box-shadow: 0px 7px 12px 0px rgba(53, 53, 53, 0.07);
+}
+
+.btn i {
+  font-size:1.2rem;
+}
+
+.slider {
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  background:rgb(242,243,248);
+  width:100%;
+  height:80vh;
+  overflow:hidden;
+}
+
+.slider:after {
+  content:'';
+  left:3.5vw;
+  height:80vh;
+  position:absolute;
+  width:1vw;
+  z-index:100;
+  pointer-events:none;
+}
+
+.slider:before {
+  content:'';
+  right:4vw;
+  height:80vh;
+  position:absolute;
+  width:1px;
+  z-index:100;
+  pointer-events:none;
+}
+</style>
+<body>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet"> 
+
+    <div class="slider">
+      <button id="prev" class="btn">&#8249;</button>
+      <div class="card-content">
+        <!-- Content -->
+
+        <div class="card">
+      <i class="lar la-heart"></i>
+      <div class="card-img">
+        <img src="https://images.unsplash.com/photo-1465494425610-9dbd2584de84?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80 " alt="">
+           </div>
+      <div class="card-text">
+        <h2>Hangout Lounge</h2>
+        <p>Lorem ipsum dolor sit amet consectetur atates aperiam distinctio dolorem! Corrupti expedita maxime dolores recusandae consequuntur ipsa repellat minus magnam numquam nisi, mollitia necessitatibus aperiam..<p>
+      </div>
+    </div>
+    
+        <div class="card">
+      <i class="lar la-heart"></i>
+      <div class="card-img">
+        <img src="https://images.unsplash.com/photo-1551632436-cbf8dd35adfa?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1471&q=80" alt="">
+      </div>
+      <div class="card-text">
+        <h2>Plenty Restaurants</h2>
+        <p>Lorem ipsum, dolor sit  harum error, at eum! Quas lorem  cupiditate? Corrupti.<p>
+      </div>
+    </div>
+
+    <div class="card">
+      <i class="lar la-heart"></i>
+      <div class="card-img">
+        <img src="https://images.unsplash.com/photo-1465494425610-9dbd2584de84?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80 " alt="">
+           </div>
+      <div class="card-text">
+        <h2>Hangout Lounge</h2>
+        <p>Lorem ipsum dolor sit amet consectetur atates aperiam distinctio dolorem! Corrupti expedita maxime dolores recusandae consequuntur ipsa repellat minus magnam numquam nisi, mollitia necessitatibus aperiam..<p>
+      </div>
+    </div>
+
+    <div class="card">
+      <i class="lar la-heart"></i>
+      <div class="card-img">
+        <img src="https://images.unsplash.com/photo-1465494425610-9dbd2584de84?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80 " alt="">
+           </div>
+      <div class="card-text">
+        <h2>Hangout Lounge</h2>
+        <p>Lorem ipsum dolor sit amet consectetur atates aperiam distinctio dolorem! Corrupti expedita maxime dolores recusandae consequuntur ipsa repellat minus magnam numquam nisi, mollitia necessitatibus aperiam..<p>
+      </div>
+    </div>
+        
+        <div class="card">
+      <i class="lar la-heart"></i>
+      <div class="card-img">
+        <img src="https://images.unsplash.com/photo-1600508774049-252b0b36ca08?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80 " alt="">
+           </div>
+      <div class="card-text">
+        <h2>Meeting Area</h2>
+        <p>Lorem ipsum dolor . Dolorum, entium alias fugit nihil id dolore sunt voluptate asperiores veritatis, neque aperiam mollitia culpa, enim recusandae ipsam cupiditate doloremque, ratione illo facere explicabo! Nemo a sed dicta..<p>
+      </div>
+    </div>
+    
+        <div class="card">
+      <i class="lar la-heart"></i>
+      <div class="card-img">
+        <img src=" https://images.unsplash.com/photo-1614568112072-770f89361490?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=774&q=80" alt="">
+          </div>
+      <div class="card-text">
+        <h2>Blues Area</h2>
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Maxime, nulla earum possimus optio magni mollitia a..<p>
+      </div>
+    </div>
+    
+        <div class="card">
+      <i class="lar la-heart"></i>
+      <div class="card-img">
+        <img src="https://images.unsplash.com/photo-1600508774049-252b0b36ca08?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80" alt="">
+          </div>
+      <div class="card-text">
+        <h2>Ball Rooms</h2>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque facere tempore porro praesentium soluta quo modi?.<p>
+      </div>
+    </div>
+        
+        
+      </div>
+       <button id="next" class="btn">&#8250;</button>
+    </div>
+    <script>
+        const next=document.querySelector('#next')
+const prev=document.querySelector('#prev')
+
+function handleScrollNext (direction) {
+  const cards = document.querySelector('.card-content')
+  cards.scrollLeft=cards.scrollLeft += window.innerWidth / 2 > 600 ? window.innerWidth /2 : window.innerWidth -100
+}
+
+function handleScrollPrev (direction) {
+  const cards = document.querySelector('.card-content')
+  cards.scrollLeft=cards.scrollLeft -= window.innerWidth / 2 > 600 ? window.innerWidth /2 : window.innerWidth -100
+}
+
+next.addEventListener('click', handleScrollNext)
+prev.addEventListener('click', handleScrollPrev)
+    </script>
+</body>
+</html>
